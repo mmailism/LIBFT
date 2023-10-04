@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kpueankl <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kpueankl <<marvin@42.fr>>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 19:10:41 by kpueankl          #+#    #+#             */
-/*   Updated: 2023/09/04 19:10:53 by kpueankl         ###   ########.fr       */
+/*   Updated: 2023/10/04 13:53:18 by kpueankl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strdup(const char *s1)
 	char	*alt;
 	char	n;
 
+	if (!s1)
+		return (NULL);
 	n = ft_strlen(s1) + 1;
 	alt = (char *)malloc(sizeof(char) * n);
 	if (!alt)
